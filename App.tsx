@@ -21,9 +21,9 @@ const DIFFICULTY_LEVELS = {
 
 const { width, height } = Dimensions.get("window");
 
-const headerHeight = 60; // Altura aproximada del header con pausa
+const headerHeight = 60; 
 const boardWidth = width; 
-const boardHeight = height - headerHeight; // Ocupa toda la pantalla menos el header
+const boardHeight = height - headerHeight; 
 const numCols = Math.floor(boardWidth / GRID_SIZE);
 const numRows = Math.floor(boardHeight / GRID_SIZE);
 
@@ -68,9 +68,6 @@ const TongueComponent = ({ direction }: { direction: string }) => {
         </View>
     );
 };
-
-
-// --- Componente Principal ---
 export default function App() {
     const [screen, setScreen] = useState("menu"); 
     const [snake, setSnake] = useState<SnakeSegment[]>([]);
@@ -368,14 +365,14 @@ export default function App() {
 }
 
 
-// --- Estilos de la App ---
+
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: "#d5f5c5", 
     },
 
-    // MENÚ
+    
     menuContainer: {
         flex: 1,
         backgroundColor: "#f5f0e6",
@@ -439,7 +436,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
 
-    // JUEGO
+
     gameContainer: {
         flex: 1,
         backgroundColor: "#d5f5c5", 
